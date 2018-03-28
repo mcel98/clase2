@@ -37,7 +37,18 @@ TEST(diccionario, ej4_obtener) {
 
 #if EJ >= 5
 
-// Completar para el ejercicio 5
+TEST(diccionario, ej5_borrar) {
+    Diccionario d;
+    d.definir(1, 10);
+    d.definir(2, 11);
+    d.borrar(1);
+    d.borrar(3);
+
+    ASSERT_FALSE(d.def(1));
+    ASSERT_TRUE(d.def(2));
+    ASSERT_FALSE(d.def(3));
+    ASSERT_TRUE(d.def(2));
+}
 
 #endif
 
